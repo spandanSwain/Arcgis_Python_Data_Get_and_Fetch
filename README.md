@@ -1,7 +1,25 @@
-# Arcgis_Python_Data_Get_and_Fetch
-Python script for pushing and getting data for an Arcgis point layer. Data can be stored as CSV file or store directly in SQL server database. You can also fetch data from a CSV or Database and push it directly to point layer.
+# ArcGIS Python Data Get & Fetch
 
-In the comments of the code I tried to explain as much as I can. The code can be further optimised.
-To push the data from CSV or Database I push them as batches. As, pushing them individually takes a lot of time (in my case I had to push 24675 data from Excel and without the batch push it took 4-5 hours, after making batches it takes arounf 2-3 minutes to push them into the layer.
+This Python script is designed for **pushing and retrieving data** for an ARCGIS point layer. Data can be stored as a **CSV file** or directly in an **SQL Server database**. You can also fetch data from these sources and push it directly to the ArcGIS point layer.
 
-The columns I used in my code is for my data, in case of your data please change them to suit your column logic also those columns have to exist in your Arcgis point layer too. As, my code simply fetches and gets data from the layer, it doesn't create or check the existence of any column.
+Pushing data **individually** is slow!  
+For example, inserting **24,675 records** from an Excel file **took 4-5 hours**.  
+After implementing **batch processing**, the same operation now takes **only 2-3 minutes**.  
+
+- The script **fetches and pushes data** but **does not** create or check the existence of columns.  
+- Modify column names to match **your dataset** and ensure they exist in your **ARCGIS point layer**.  
+- **Sensitive information** (ArcGIS username, password, URL, feature layer ID) is stored in `config.ini`.  
+
+---
+
+### For `config.ini`
+
+Create a `config.ini` file in the project directory to store your ARCGIS credentials: (or you can ignore the `config.ini` and simply type the username and layer IDs.)
+
+```ini
+[arcgis]
+USERNAME = your_username
+PASSWORD = your_password
+URL = your_company_url
+FEATURE_LAYER_ID = your_feature_layer_id
+```
