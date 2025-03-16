@@ -14,7 +14,10 @@ After implementing **batch processing**, the same operation now takes **only 2-3
 
 ### For `config.ini`
 
-Create a `config.ini` file in the project directory to store your ARCGIS credentials: (or you can ignore the `config.ini` and simply type the username and layer IDs.)
+Create a `config.ini` file in the project directory to store your ARCGIS credentials and other info like mode of operation and database credentials: (or you can ignore the `config.ini` and simply type the username and layer IDs.)
+
+For better understanding of `config.ini` please refer it's documentation or code snippets.
+[VISIT](https://www.geeksforgeeks.org/python-reading-ini-configuration-files/)
 
 ```ini
 [arcgis]
